@@ -10,6 +10,7 @@ Source0: http://prdownloads.sourceforge.net/mpgtx/mpgtx-%{version}.tar.bz2
 License: GPL
 Group: Video
 URL: http://mpgtx.sourceforge.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 # Author: Laurent Alacoque <laureck@users.sourceforge.net>
 
 %description
