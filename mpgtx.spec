@@ -1,6 +1,6 @@
 %define name mpgtx
 %define version 1.3.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: Manipulate tags, split, join, demultiplex, and fetch information on MPEG files
 Name: %{name}
