@@ -28,12 +28,12 @@ perl -pi -e 's/^\s*inline\s*$//' *.cxx
 %make CFLAGS="$RPM_OPT_FLAGS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DNOSIGNAL_H"
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 find -type f | xargs chmod a+r
-make install MANDIR="$RPM_BUILD_ROOT/%{_mandir}/man1" INSTALLDIR="$RPM_BUILD_ROOT/%{_bindir}" MANDIRDE=%buildroot%_mandir/de/man1
+make install MANDIR="%{buildroot}/%{_mandir}/man1" INSTALLDIR="%{buildroot}/%{_bindir}" MANDIRDE=%buildroot%_mandir/de/man1
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
