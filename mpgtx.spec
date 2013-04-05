@@ -1,16 +1,13 @@
-%define name mpgtx
-%define version 1.3.1
-%define release %mkrel 9
+%define debug_package %{nil}
 
 Summary: Manipulate tags, split, join, demultiplex, and fetch information on MPEG files
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Name:    mpgtx
+Version: 1.3.1
+Release: 10
 Source0: http://prdownloads.sourceforge.net/mpgtx/mpgtx-%{version}.tar.bz2
 License: GPL
 Group: Video
 URL: http://mpgtx.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 # Author: Laurent Alacoque <laureck@users.sourceforge.net>
 
 %description
@@ -28,15 +25,12 @@ perl -pi -e 's/^\s*inline\s*$//' *.cxx
 %make CFLAGS="$RPM_OPT_FLAGS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DNOSIGNAL_H"
 
 %install
-rm -rf $RPM_BUILD_ROOT
 find -type f | xargs chmod a+r
 make install MANDIR="$RPM_BUILD_ROOT/%{_mandir}/man1" INSTALLDIR="$RPM_BUILD_ROOT/%{_bindir}" MANDIRDE=%buildroot%_mandir/de/man1
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog README
 %{_bindir}/*
 %{_mandir}/man1/*
@@ -79,14 +73,14 @@ rm -rf $RPM_BUILD_ROOT
     - restore BuildRoot
 
 
-* Thu Jan 11 2007 Götz Waschk <waschk@mandriva.org> 1.3.1-1mdv2007.0
+* Thu Jan 11 2007 GÃ¶tz Waschk <waschk@mandriva.org> 1.3.1-1mdv2007.0
 + Revision: 107429
 - Import mpgtx
 
-* Thu Jan 11 2007 G�tz Waschk <waschk@mandriva.org> 1.3.1-1mdv2007.1
+* Thu Jan 11 2007 Götz Waschk <waschk@mandriva.org> 1.3.1-1mdv2007.1
 - rebuild
 
-* Wed Jun 08 2005 G�tz Waschk <waschk@mandriva.org> 1.3.1-1mdk
+* Wed Jun 08 2005 Götz Waschk <waschk@mandriva.org> 1.3.1-1mdk
 - add de man pages
 - fix source URL
 - New release 1.3.1
