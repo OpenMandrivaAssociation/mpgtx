@@ -3,7 +3,7 @@
 Summary:	Manipulate tags, split, join, demultiplex, and fetch information on MPEG files
 Name:		mpgtx
 Version:	1.3.1
-Release:	12
+Release:	13
 License:	GPLv2
 Group:		Video
 Url:		http://mpgtx.sourceforge.net/
