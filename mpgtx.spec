@@ -6,7 +6,7 @@ Version:	1.3.1
 Release:	21
 License:	GPLv2
 Group:		Video
-Url:		http://mpgtx.sourceforge.net/
+Url:		https://mpgtx.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/mpgtx/mpgtx-%{version}.tar.bz2
 
 %description
