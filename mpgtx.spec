@@ -9,6 +9,11 @@ Group:		Video
 Url:		https://mpgtx.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/mpgtx/mpgtx-%{version}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 mpgtx (an MPEG ToolboX) allows you to manipulate ID3 tags, split, join,
 demultiplex, and fetch detailed information about a variety of MPEG files.
